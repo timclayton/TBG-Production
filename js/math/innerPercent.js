@@ -4,11 +4,9 @@
 // b = segment start
 // c = segment end
 
-var innerPercent = function(a,b,c) {	
+var calcPercent = function(a,b,c) {	
 		
-	if ( a < b ) { var d = 0; }
-	else if ( a >= c ) { var d = 1; }
-	else { var d =  ( a - b ) / ( c - b ); }
-	return d;
+	if ( a <= b ) { return 0 }
+	else { return a >= c ? 1 : ( a - b ) / ( c - b ) }
 
 }
